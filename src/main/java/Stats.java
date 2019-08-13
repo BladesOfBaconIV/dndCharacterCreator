@@ -13,17 +13,17 @@ public class Stats {
         String getName() { return this.name; }
     }
 
-    private byte[] stats;
+    private int[] stats;
 
-    public Stats(byte[] stats) {
+    public Stats(int[] stats) {
         this.stats = stats;
     }
 
-    public Stats(byte str, byte dex, byte con, byte int_, byte wis, byte chr) {
-        this(new byte[] {str, dex, con, int_, wis , chr});
+    public Stats(int str, int dex, int con, int int_, int wis, int chr) {
+        this(new int[] {str, dex, con, int_, wis , chr});
     }
 
-    public byte getStatByName(StatNames name) {
+    public int getStatByName(StatNames name) {
         return this.stats[name.ordinal()];
     }
 
@@ -42,11 +42,11 @@ public class Stats {
         return s;
     }
 
-    public byte[] getStats() {
+    public int[] getStats() {
         return this.stats;
     }
 
-    public void setStats(byte[] stats) {
+    public void setStats(int[] stats) {
         this.stats = stats;
     }
 }
