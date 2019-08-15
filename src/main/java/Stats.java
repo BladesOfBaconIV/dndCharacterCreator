@@ -1,3 +1,5 @@
+import databaseHandlers.DBField;
+
 public class Stats {
 
     public enum StatNames {
@@ -13,6 +15,7 @@ public class Stats {
         String getName() { return this.name; }
     }
 
+    @DBField(values = {"str", "dex", "con", "int", "wis", "chr"})
     private int[] stats;
 
     public Stats(int[] stats) {
