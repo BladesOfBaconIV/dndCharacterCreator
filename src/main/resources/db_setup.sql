@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS races (
+    race VARCHAR(20) UNIQUE NOT NULL PRIMARY KEY ON CONFLICT REPLACE,
+    str INTEGER(1) NOT NULL,
+    dex INTEGER(1) NOT NULL,
+    con INTEGER(1) NOT NULL,
+    int INTEGER(1) NOT NULL,
+    wis INTEGER(1) NOT NULL,
+    chr INTEGER(1) NOT NULL,
+    languages TEXT,
+    attributes TEXT,
+    speed INTEGER(1)
+);
